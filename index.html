@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mlsná tlapka – domácí pamlsky pro psy a kočky</title>
+  <meta name="description" content="Domácí pamlsky pro psy a kočky z jednoduchých surovin, pečené v malých dávkách.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <a class="logo" href="#"><span class="dot">🐾</span> Mlsná tlapka</a>
+    <nav>
+      <a href="#nabidka">Nabídka</a>
+      <a href="#jak">Jak to funguje</a>
+      <a href="#recenze">Recenze</a>
+    </nav>
+    <button id="cart-btn" class="cart-btn" aria-label="Přejít na objednávku">Košík <span id="cart-count">0</span></button>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <p class="pill">Bez masa, s kapkou lososového oleje</p>
+      <h1>Pamlsky, na které se vaši mazlíčci těší celý den.</h1>
+      <p class="lead">Ovesné vločky, zelenina, ovoce a kapka lososového oleje. Žádné maso, žádný cukr, žádné konzervanty a složení, kterému rozumíte.</p>
+      <div class="cta">
+        <a class="btn primary" href="#nabidka">Vybrat pamlsky</a>
+        <a class="btn ghost" href="#jak">Jak to funguje</a>
+      </div>
+      <ul class="trust">
+        <li>Bez masa</li>
+        <li>Doprava od 990 Kč zdarma</li>
+        <li>Expedice do 2 dnů</li>
+      </ul>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <div class="tile t1">🐶</div>
+      <div class="tile t2">🐱</div>
+      <div class="tile t3">🦴</div>
+      <div class="tile t4">🐟</div>
+      <div class="blob"></div>
+    </div>
+  </section>
+
+  <section id="nabidka" class="section">
+    <div class="head">
+      <h2>Naše nabídka</h2>
+      <div class="filters" role="group" aria-label="Pro koho">
+        <button class="filter active" data-filter="all">Vše</button>
+        <button class="filter" data-filter="dog">Psi</button>
+        <button class="filter" data-filter="cat">Kočky</button>
+      </div>
+    </div>
+    <div id="grid" class="grid"></div>
+  </section>
+
+  <section id="jak" class="section steps-wrap">
+    <h2>Jak to funguje</h2>
+    <ol class="steps">
+      <li><span class="n">1</span><h3>Vyberete</h3><p>Podle chuti a velikosti mazlíčka. Složení najdete u každého pamlsku.</p></li>
+      <li><span class="n">2</span><h3>Upečeme</h3><p>Objednávku pečeme čerstvou, nic nevozíme ze skladu.</p></li>
+      <li><span class="n">3</span><h3>Doručíme</h3><p>Balíček odesíláme do dvou pracovních dnů po celé ČR.</p></li>
+    </ol>
+  </section>
+
+  <section id="recenze" class="section">
+    <h2>Co říkají mlsouni a jejich lidé</h2>
+    <div class="reviews">
+      <blockquote><p>Bára je vybíravá, ale sušenky s lososovým olejem zmizí za minutu.</p><cite>Tereza, kočka Bára</cite></blockquote>
+      <blockquote><p>Konečně pamlsky s krátkým složením bez masa. Alfík je zbožňuje a žaludek mu nedělá potíže.</p><cite>Martin, pes Alfík</cite></blockquote>
+      <blockquote><p>Balení voní jako z domácí pekárny. Objednám určitě znovu.</p><cite>Lucie, fenka Luna</cite></blockquote>
+    </div>
+  </section>
+
+  <section id="objednavka" class="section">
+    <div class="order">
+      <div class="cart-box">
+        <h2>Váš košík</h2>
+        <ul id="cart-list" class="cart-list"></ul>
+        <p class="total">Celkem <strong id="total">0 Kč</strong></p>
+        <p id="ship" class="ship"></p>
+      </div>
+      <form id="order-form" novalidate>
+        <h3>Kam to pošleme?</h3>
+        <label>Jméno<input name="name" type="text" required autocomplete="name"></label>
+        <label>E-mail<input name="email" type="email" required autocomplete="email"></label>
+        <label>Poznámka (alergie, mazlíček)<textarea name="note" rows="3"></textarea></label>
+        <button class="btn primary" type="submit">Odeslat objednávku</button>
+        <p id="msg" class="msg" role="status"></p>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p class="logo">🐾 Mlsná tlapka</p>
+    <p>Ostrava · ahoj@mlsnatlapka.example</p>
+    <p class="small">Pamlsky jsou doplňkové krmivo a nenahrazují hlavní stravu. Kočky potřebují maso v hlavním krmivu. Při zdravotních potížích se poraďte s veterinářem.</p>
+  </footer>
+  <div id="toast" class="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
